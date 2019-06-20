@@ -9,4 +9,5 @@ class ItcastSpider(scrapy.Spider):
     )
 
     def parse(self, response):
-        pass
+        filename = "teacher.html"
+        open(filename, 'w').write(response.body)
